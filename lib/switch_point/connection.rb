@@ -15,6 +15,7 @@ module SwitchPoint
           super(*args, &block)
         else
           parent_method = method(method_name).super_method
+          parent_method = parent_method.super_method if parent_method.owner == SwitchPoint::Connection
           Connection.handle_generated_connection(self, parent_method, method_name, *args, &block)
         end
       end
