@@ -3,6 +3,7 @@
 require 'active_support/lazy_load_hooks'
 require 'switch_point/config'
 require 'switch_point/version'
+require 'switch_point/proxy_repository'
 
 module SwitchPoint
   module ClassMethods
